@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emberfall Duel — a duel of cunning cards</title>
+<meta name="description" content="Emberfall Duel: a 3-lane card battler against the Warden. Play creatures, cast spells, reduce the Warden from 20 life to 0.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<noscript><p style="padding:2em;text-align:center">Emberfall Duel needs JavaScript to play.</p></noscript>
+<div id="app">
+  <header>
+    <h1><span class="flame">🔥</span> EMBERFALL DUEL</h1>
+    <span id="turn-label">Ready</span>
+    <span id="hint"></span>
+  </header>
+
+  <div class="side" id="ai-side">
+    <div class="side-label">
+      <div class="name ai">👤 THE WARDEN</div>
+      <div id="ai-life"></div>
+    </div>
+    <div class="hand" id="ai-hand"></div>
+    <div class="side-actions">
+      <div id="ai-mana"></div>
+    </div>
+  </div>
+
+  <div id="lanes">
+    <div class="lane" id="lane-0"></div>
+    <div class="lane" id="lane-1"></div>
+    <div class="lane" id="lane-2"></div>
+  </div>
+
+  <div class="side" id="player-side">
+    <div class="side-label">
+      <div class="name me">🧑 YOU</div>
+      <div id="player-life"></div>
+    </div>
+    <div class="hand" id="player-hand"></div>
+    <div class="side-actions">
+      <div id="player-mana"></div>
+      <button id="end-turn" type="button">End Turn ⏎</button>
+      <button id="restart-btn" class="small-btn" type="button">↻ New Duel</button>
+      <button id="sound-btn" class="small-btn" type="button">🔊 Sound on</button>
+    </div>
+  </div>
+
+  <div id="log"></div>
+</div>
+
+<div id="flash"></div>
+<div id="overlay" class="overlay"></div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
